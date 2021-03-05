@@ -34,7 +34,7 @@ public class User {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate birthday;
 	
-	@NotEmpty
+	@NotNull
 	@Size(min=2, max=3, message="취미를 2개 이상 선택하세요.")
 	private List<String> hobbys;
 }
