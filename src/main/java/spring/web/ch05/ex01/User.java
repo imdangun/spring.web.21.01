@@ -1,4 +1,4 @@
-package spring.web.ch05.ex01.sub.domain;
+package spring.web.ch05.ex01;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,7 +23,7 @@ public class User {
 	@NotEmpty @Size(min=2, max=4)
 	private String name;
 	
-	@NotNull @Max(100) @PositiveOrZero
+	@NotNull @Max(100) @PositiveOrZero // String 외엔, @NotEmpty, @NotBlank 를 못 쓴다.
 	private Integer age;
 	
 	@NotBlank @Email(message="이메일 주소를 입력하세요.")
@@ -34,7 +34,7 @@ public class User {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate birthday;
 	
-	@NotNull
+	@NotEmpty // @NotNull 은 효과 없다.
 	@Size(min=2, max=3, message="취미를 2개 이상 선택하세요.")
 	private List<String> hobbys;
 }
