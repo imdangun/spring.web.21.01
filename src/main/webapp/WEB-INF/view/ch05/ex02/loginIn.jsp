@@ -25,7 +25,12 @@
 			<div class='col-6 d-flex justify-content-end'>
 				<button type='submit' class='btn btn-primary'>로그인</button>
 			</div>
-			<div class='col'></div>
+			<div class='col'>
+				<div class='form-check form-check-inline'>
+					<input type='checkbox' class='form-check-input' id='rememberId' name='rememberId'/>
+					<label class='form-check-label' for='rememberId'>아이디 저장</label>
+				</div>
+			</div>
 		</div>
 	</f:form>
 </div>
