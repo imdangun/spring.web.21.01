@@ -3,8 +3,7 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:mvc='http://www.springframework.org/schema/mvc' 
     xmlns:mybatis='http://mybatis.org/schema/mybatis-spring'
-    xmlns:context='http://www.springframework.org/schema/context'
-    xmlns:tx='http://www.springframework.org/schema/tx'
+    xmlns:context='http://www.springframework.org/schema/context'   
     xsi:schemaLocation='http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/mvc 
@@ -12,9 +11,7 @@
     http://mybatis.org/schema/mybatis-spring
     http://mybatis.org/schema/mybatis-spring.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd
-    http://www.springframework.org/schema/tx
-    http://www.springframework.org/schema/tx/spring-tx.xsd'>
+    http://www.springframework.org/schema/context/spring-context.xsd'>
     
     <mvc:resources mapping="/res/**" location="/res/" />
 
@@ -36,4 +33,12 @@
 	
 	<mybatis:scan base-package='spring.web.ch04.dao.map.**'/>
 	<mybatis:scan base-package='spring.web.ch06.ex04.dao.map.**'/>
+	
+	<bean id='multipartResolver' class='org.springframework.web.multipart.commons.CommonsMultipartResolver'>
+		<property name='maxUploadSize' value='5242880'/>
+		<property name='maxInMemorySize' value='5242880'/>
+		<property name='defaultEncoding' value='utf-8'/>
+	</bean>
+	
+	<context:property-placeholder location='classpath:spring/web/config/app.properties'/>
 </beans>
