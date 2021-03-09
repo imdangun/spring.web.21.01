@@ -1,4 +1,4 @@
-package spring.web.ch06.domain;
+package spring.web.ch06.ex04.domain;
 
 import java.time.LocalDate;
 
@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Alias("ch06.ex04.user")
 public class User {
 	private int userId;
 	private String userName;

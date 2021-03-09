@@ -28,10 +28,12 @@
 		<property name='configLocation' value='classpath:spring/web/config/sqlMapConfig.xml'/>
 		<property name='mapperLocations'>
 			<array>
-				<value>classpath:spring/web/ch04/dao/map/**/*Map.xml</value>			
+				<value>classpath:spring/web/ch04/dao/map/**/*Map.xml</value>
+				<value>classpath:spring/web/ch06/ex04/dao/map/**/*Map.xml</value>				
 			</array>
 		</property>
 	</bean>
 	
 	<mybatis:scan base-package='spring.web.ch04.dao.map.**'/>
+	<mybatis:scan base-package='spring.web.ch06.ex04.dao.map.**'/>
 </beans>
