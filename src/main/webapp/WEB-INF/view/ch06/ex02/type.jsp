@@ -26,6 +26,14 @@ function init() {
 			method: 'put'
 		}).done(result => console.log(result));
 	});
+	
+	$('#booleanBtn').click(() => {
+		$.ajax({
+			url: 'boolean',
+			data: 'true',
+			method: 'put'
+		}).done(result => console.log(result && false));
+	});
 }
 
 $(init);
