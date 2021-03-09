@@ -54,7 +54,7 @@ $(() => {
 });
 </script>
 <div class='container'>
-	<form id='userForm'>
+	<form>
 		<div class='row'>
 			<div class='form-group col'>
 				<label class='form-label' for='userId'>ID: </label>
