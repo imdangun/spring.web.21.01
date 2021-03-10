@@ -2,6 +2,7 @@ package spring.web.ch06.ex01;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,8 +26,9 @@ public class AjaxController {
 	}
 	
 	@GetMapping("/get")
-	public User get() {
-		return new User(100, "양승일", LocalDate.of(2025, 7, 12));
+	public User get(int userId, @RequestParam String userName, 
+			@DateTimeFormat(pattern="yyyy-MM-dd") LocalDate birthday) {
+		return new User(userId, userName, birthday);
 	}
 	
 	@PostMapping("/post")
