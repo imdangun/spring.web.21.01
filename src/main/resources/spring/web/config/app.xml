@@ -3,7 +3,8 @@
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xmlns:mvc='http://www.springframework.org/schema/mvc' 
     xmlns:mybatis='http://mybatis.org/schema/mybatis-spring'
-    xmlns:context='http://www.springframework.org/schema/context'   
+    xmlns:context='http://www.springframework.org/schema/context' 
+    xmlns:tx='http://www.springframework.org/schema/tx'  
     xsi:schemaLocation='http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/mvc 
@@ -11,7 +12,9 @@
     http://mybatis.org/schema/mybatis-spring
     http://mybatis.org/schema/mybatis-spring.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd'>
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd'>
     
     <mvc:resources mapping="/res/**" location="/res/" />
 
@@ -33,6 +36,7 @@
 	
 	<mybatis:scan base-package='spring.web.ch04.dao.map.**'/>
 	<mybatis:scan base-package='spring.web.ch06.ex04.dao.map.**'/>
+	<mybatis:scan base-package='spring.web.ch09.dao.map.**'/>
 	
 	<bean id='multipartResolver' class='org.springframework.web.multipart.commons.CommonsMultipartResolver'>
 		<property name='maxUploadSize' value='5242880'/>
@@ -41,4 +45,25 @@
 	</bean>
 	
 	<context:property-placeholder location='classpath:spring/web/config/app.properties'/>
+	
+	<bean id='mailSender' class='org.springframework.mail.javamail.JavaMailSenderImpl'>
+		<property name='username' value='imdangunmail'/>
+		<property name='password' value='ecsiehzzhtgttgau'/>
+		<property name='javaMailProperties'>
+			<props>
+				<prop key='mail.smtp.starttls.enable'>true</prop>
+				<prop key='mail.smtp.host'>smtp.gmail.com</prop>
+				<prop key='mail.smtp.port'>465</prop>
+				<prop key='mail.smtp.socketFactory.class'>javax.net.ssl.SSLSocketFactory</prop>
+				<prop key='mail.smtp.socketFactory.port'>465</prop>
+				<prop key='mail.smtp.socketFactory.fallback'>false</prop>
+				<prop key='mail.smtp.auth'>true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id='transactionManager' class='org.springframework.jdbc.datasource.DataSourceTransactionManager'>
+		<property name='dataSource' ref='dataSource'/>
+	</bean>
+	<tx:annotation-driven/>
 </beans>
