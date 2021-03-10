@@ -6,9 +6,11 @@ import javax.mail.internet.MimeMessage.RecipientType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Service;
 
 import spring.web.ch08.domain.Message;
 
+@Service
 public class MailServiceImpl implements MailService {
 	@Autowired private JavaMailSender mailSender;
 	
