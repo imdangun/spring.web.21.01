@@ -1,12 +1,12 @@
-package spring.web.ch06.ex04.dao;
+package spring.web.ch06.ex02.dao;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import spring.web.ch06.ex04.dao.map.UserMap;
-import spring.web.ch06.ex04.domain.User;
+import spring.web.ch06.ex02.dao.map.UserMap;
+import spring.web.ch06.ex02.domain.User;
 
 @Repository("ch06.ex04.userDao")
 public class UserDaoImpl implements UserDao {

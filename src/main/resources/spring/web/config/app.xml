@@ -29,13 +29,13 @@
 		<property name='mapperLocations'>
 			<array>
 				<value>classpath:spring/web/ch04/dao/map/**/*Map.xml</value>
-				<value>classpath:spring/web/ch06/ex04/dao/map/**/*Map.xml</value>				
+				<value>classpath:spring/web/ch06/ex02/dao/map/**/*Map.xml</value>				
 			</array>
 		</property>
 	</bean>
 	
 	<mybatis:scan base-package='spring.web.ch04.dao.map.**'/>
-	<mybatis:scan base-package='spring.web.ch06.ex04.dao.map.**'/>
+	<mybatis:scan base-package='spring.web.ch06.ex02.dao.map.**'/>
 	<mybatis:scan base-package='spring.web.ch09.dao.map.**'/>
 	
 	<bean id='multipartResolver' class='org.springframework.web.multipart.commons.CommonsMultipartResolver'>

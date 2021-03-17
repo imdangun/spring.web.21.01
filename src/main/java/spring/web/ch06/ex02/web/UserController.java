@@ -1,4 +1,4 @@
-package spring.web.ch06.ex04.web;
+package spring.web.ch06.ex02.web;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import spring.web.ch06.ex04.domain.User;
-import spring.web.ch06.ex04.service.UserService;
+import spring.web.ch06.ex02.domain.User;
+import spring.web.ch06.ex02.service.UserService;
 
-@RestController("ch06.ex04.userController")
-@RequestMapping("/ch06/ex04/user")
+@RestController("ch06.ex02.userController")
+@RequestMapping("/ch06/ex02/user")
 public class UserController {
 	@Autowired private UserService userService;
 	

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
 	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
-<mapper namespace='spring.web.ch06.ex04.dao.map.UserMap'>
-	<select id='selectUsers' resultType='ch06.ex04.user'>
+<mapper namespace='spring.web.ch06.ex02.dao.map.UserMap'>
+	<select id='selectUsers' resultType='ch06.ex02.user'>
 		select user_id userId, user_name userName, birthday
 		from users
 	</select>

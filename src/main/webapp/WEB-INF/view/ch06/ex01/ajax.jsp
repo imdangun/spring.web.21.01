@@ -11,8 +11,7 @@ function init() {
 				userId: 1,
 				userName: '최한석',
 				birthday: '2025-01-01'
-			},
-			contentType: 'application/json',			
+			}		
 		}).done(user => console.log(user));
 	});
 	

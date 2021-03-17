@@ -4,6 +4,6 @@
 <configuration>
 	<typeAliases>
 		<package name='spring.web.ch04.domain'/>
-		<package name='spring.web.ch06.ex04.domain'/>
+		<package name='spring.web.ch06.ex02.domain'/>
 	</typeAliases>
 </configuration>

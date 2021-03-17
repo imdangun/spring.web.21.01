@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import spring.web.ch06.domain.User;
-
 @RestController
 @RequestMapping("/ch06/ex01")
 public class AjaxController {

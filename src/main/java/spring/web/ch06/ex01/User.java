@@ -1,8 +1,6 @@
-package spring.web.ch06.ex04.domain;
+package spring.web.ch06.ex01;
 
 import java.time.LocalDate;
-
-import org.apache.ibatis.type.Alias;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -13,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Alias("ch06.ex04.user")
 public class User {
 	private int userId;
 	private String userName;

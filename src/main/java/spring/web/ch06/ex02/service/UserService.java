@@ -1,8 +1,8 @@
-package spring.web.ch06.ex04.service;
+package spring.web.ch06.ex02.service;
 
 import java.util.List;
 
-import spring.web.ch06.ex04.domain.User;
+import spring.web.ch06.ex02.domain.User;
 
 public interface UserService {
 	List<User> getUsers();

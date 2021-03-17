@@ -32,7 +32,7 @@ public class AppConfig implements WebMvcConfigurer {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/ch03/ex03").setViewName("ch03/ex03/surveyIn");
-		registry.addViewController("/ch06/ex04/user").setViewName("ch06/ex04/user");
+		registry.addViewController("/ch06/ex02/user").setViewName("ch06/ex02/user");
 		registry.addViewController("/ch09/x").setViewName("ch09/x");
 	}
 	

@@ -1,8 +1,8 @@
-package spring.web.ch06.ex04.dao;
+package spring.web.ch06.ex02.dao;
 
 import java.util.List;
 
-import spring.web.ch06.ex04.domain.User;
+import spring.web.ch06.ex02.domain.User;
 
 public interface UserDao {
 	List<User> selectUsers();
